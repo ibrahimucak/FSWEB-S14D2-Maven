@@ -74,7 +74,7 @@ public class MainTest {
         Field pillowsField = bed.getClass().getDeclaredField("pillows");
         Field heightField = bed.getClass().getDeclaredField("height");
         Field sheetsField = bed.getClass().getDeclaredField("sheets");
-        Field quiltsField = bed.getClass().getDeclaredField("quilts");
+        Field quiltsField = bed.getClass().getDeclaredField("quilt");
 
         assertEquals(styleField.getModifiers(), 2);
         assertEquals(pillowsField.getModifiers(), 2);
@@ -88,7 +88,7 @@ public class MainTest {
     public void testBedInstanceTypes() throws NoSuchFieldException {
         assertThat(bed.getStyle(), instanceOf(String.class));
         assertThat(bed.getHeight(), instanceOf(Integer.class));
-        assertThat(bed.getQuilts(), instanceOf(Integer.class));
+        assertThat(bed.getQuilt(), instanceOf(Integer.class));
         assertThat(bed.getSheets(), instanceOf(Integer.class));
         assertThat(bed.getPillows(), instanceOf(Integer.class));
     }
